@@ -8,6 +8,14 @@
       <nuxt-link to="/products-on-click">Products on click</nuxt-link>
       <br />
       <nuxt-link to="/users">Users</nuxt-link>
+      <br />
+      <nuxt-link to="/text-reverse">Text Revers</nuxt-link>
+      <br />
+      <nuxt-link to="/spiral">Spiral</nuxt-link>
+      <br />
+      <nuxt-link to="/cycle-list">List</nuxt-link>
+      <br />
+      <nuxt-link to="/scroll">Scroll v1</nuxt-link>
     </div>
     <div>
       <Logo />
@@ -40,7 +48,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
