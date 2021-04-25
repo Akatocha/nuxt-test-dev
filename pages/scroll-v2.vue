@@ -55,7 +55,7 @@ export default {
         }
       );
     });
-    this.mainWidth = this.$el.querySelector(".container").offsetWidth;
+    this.mainWidth = this.$el.querySelector(".container").offsetWidth / 2;
     this.startParent = this.$el.querySelector(".box").offsetTop;
     this.endParent = this.$el.querySelector(".box").offsetHeight + this.startParent;
     console.log(this.endParent);
@@ -83,10 +83,13 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
+  bottom: 0;
   z-index: 2;
   position: fixed;
   display: flex;
   span {
+    background: #000000ad;
+    color: white;
     cursor: pointer;
     padding: 20px;
     font-weight: bold;
@@ -106,29 +109,34 @@ export default {
 }
 
 .panel {
+  color: white;
+
   width: 100%;
   height: 100vh;
   will-change: transform;
+  background-size: cover;
 }
 .sart-panel {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: yellow;
+  background-image: url("~assets/end.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 .red {
-  background: red;
+  background-image: url("~assets/s-2.jpg");
 }
 .orange {
-  background: orange;
+  background-image: url("~assets/s-1.jpg");
 }
 .purple {
-  background: purple;
+  background-image: url("~assets/s-3.jpg");
 }
 .green {
-  background: green;
+  background-image: url("~assets/s-4.jpg");
 }
 .gray {
-  background: gray;
+  background-image: url("~assets/s-6.jpg");
 }
 </style>

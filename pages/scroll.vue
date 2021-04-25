@@ -18,15 +18,15 @@
         <section class="s-5">
           <h3>Title</h3>
         </section>
-        <!-- <section class="s-6">
+        <section class="s-6">
           <h3>Title</h3>
-        </section> -->
+        </section>
       </div>
     </div>
-    <!-- <h1 @click="goToTop">BACK TO TOP</h1>
+    <h1 @click="goToTop">BACK TO TOP</h1>
     <section class="end">
       <h3>End</h3>
-    </section> -->
+    </section>
   </div>
 </template>
 
@@ -50,10 +50,10 @@ export default {
       let c = this.$el.querySelector("section").offsetWidth;
       console.log("widthEl", c);
       let w = this.mainWidth;
-      let s = w / 5;
+      let s = w / 6;
       console.log("pEl", w);
       console.log("wEl", s);
-      let tot = start + c * index;
+      let tot = start + s * index;
       console.log("tot", tot);
       window.scroll(0, tot);
     },
@@ -70,9 +70,9 @@ export default {
     tl.fromTo(".s-3", { x: "-100%" }, { x: "-200%" });
     tl.fromTo(".s-4", { x: "-400%" }, { x: "-300%" });
     tl.fromTo(".s-5", { x: "-300%", y: "-100%" }, { x: "-400%", y: 0 });
-    // tl.fromTo(".s-6", { x: "-500%", scale: 0.5, y: "100%" }, { scale: 1, y: 0 });
+    tl.fromTo(".s-6", { x: "-500%", scale: 0.5, y: "100%" }, { scale: 1, y: 0 });
 
-    this.mainWidth = this.$el.querySelector(".main").offsetWidth;
+    this.mainWidth = this.$el.querySelector(".main").offsetWidth / 2;
     console.log("mwmw", this.mainWidth);
     document.addEventListener("scroll", e => {
       // console.log(window.scrollY);
@@ -119,7 +119,7 @@ h1 {
 }
 .main {
   background: #000;
-  min-width: 500vw;
+  min-width: 600vw;
   height: 100vh;
   display: flex;
 }
