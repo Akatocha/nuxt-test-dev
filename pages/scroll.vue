@@ -53,7 +53,8 @@ export default {
       let s = w / 6;
       console.log("pEl", w);
       console.log("wEl", s);
-      let tot = start + s * index;
+      // let tot = start + s * index;
+      let tot = 400 * index - 400;
       console.log("tot", tot);
       window.scroll(0, tot);
     },
@@ -82,7 +83,8 @@ export default {
       animation: tl,
       trigger: ".box",
       start: "top top",
-      end: this.mainWidth,
+      // end: this.mainWidth,
+      end: 2000,
       scrub: true,
       pin: true
     });
